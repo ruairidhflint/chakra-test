@@ -5,6 +5,7 @@ import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import "./index.css";
 import { ButtonStyle } from "./components/Button.tsx";
 import { RadioStyle } from "./components/Radio.tsx";
+import { ModalStyle } from "./components/Modal.tsx";
 
 const theme = extendTheme({
   fonts: {
@@ -14,6 +15,7 @@ const theme = extendTheme({
     Button: ButtonStyle,
     RadioGroup: RadioStyle,
     Radio: RadioStyle,
+    Modal: ModalStyle,
   },
 });
 
