@@ -1,0 +1,4 @@
+@forward "@tipalti/global-styles/src/index.scss" with (
+  $fa-font-path:
+    "@tipalti/global-styles/src/vendor/@fortawesome/fontawesome-pro/webfonts"
+);
