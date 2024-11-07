@@ -32,16 +32,26 @@ const variantStyles = {
     backgroundColor: "#ffbc00",
     color: "#021d2d",
     border: "1px solid transparent",
+    _hover: {
+      backgroundColor: "#ffda7d",
+    },
   },
   secondary: {
     backgroundColor: "white",
     color: "#021d2d",
     border: "1px solid #021d2d",
+    _hover: {
+      border: "1px solid #6780ff",
+      backgroundColor: "#ebf1ff",
+    },
   },
   action: {
     backgroundColor: "#b9d0ff",
     color: "#021d2d",
     border: "1px solid transparent",
+    _hover: {
+      backgroundColor: "#e0e7f7",
+    },
   },
 };
 
@@ -73,9 +83,9 @@ export const ChakraButton = ({
       // Interaction
       cursor="pointer"
       transition="background-color 0.2s, color 0.2s, border-color 0.2s"
-      _hover={{
-        opacity: 0.8,
-      }}
+      // _hover={{
+      //   opacity: 0.8,
+      // }}
       // Animation
       animationDuration="0.01ms !important"
       animationIterationCount="1 !important"
