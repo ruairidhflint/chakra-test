@@ -40,17 +40,17 @@ const Chakra = () => {
     <Box>
       <Box mb="3">
         <Text>Primary Button</Text>
-        <ChakraButton variant="primary">Button</ChakraButton>
+        <ChakraButton customVariant="primary">Button</ChakraButton>
       </Box>
       <Separator mt="3" mb="3" />
       <Box mb="3">
         <Text>Secondary Button</Text>
-        <ChakraButton variant="secondary">Button</ChakraButton>
+        <ChakraButton customVariant="secondary">Button</ChakraButton>
       </Box>
       <Separator mt="3" mb="3" />
       <Box mb="3">
         <Text>Action Primary Button</Text>
-        <ChakraButton variant="action">Button</ChakraButton>
+        <ChakraButton customVariant="action">Button</ChakraButton>
       </Box>
       <Separator mt="3" mb="3" />
       <Box mb="3">

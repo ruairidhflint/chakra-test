@@ -1,6 +1,7 @@
 import { Box, Text, Separator } from "@chakra-ui/react";
 import { ComparisonLayout } from "../components/ComparisonLayout";
 import { TipInput } from "@tipalti/react-input";
+import { ChakraInput } from "../components/chakra/Input";
 
 const Tipalti = () => {
   return (
@@ -49,12 +50,42 @@ const Tipalti = () => {
     </Box>
   );
 };
+const Chakra = () => {
+  return (
+    <Box>
+      <Box mb="3" w="50%">
+        <Text mb="1">Default Input</Text>
+        <ChakraInput />
+      </Box>
+      <Separator mt="3" mb="3" />
+      <Box mb="3" w="50%">
+        <Text mb="1">Input with Icon</Text>
+        <ChakraInput />
+      </Box>
+      <Separator mt="3" mb="3" />
+      <Box mb="3" w="50%">
+        <Text mb="1">Disabled Input</Text>
+        <ChakraInput />
+      </Box>
+      <Separator mt="3" mb="3" />
+      <Box mb="3" w="50%">
+        <Text mb="1">Input with Error</Text>
+        <ChakraInput />
+      </Box>
+      <Separator mt="3" mb="3" />
+      <Box mb="3" w="50%">
+        <Text mb="1">Required Input</Text>
+        <ChakraInput />
+      </Box>
+    </Box>
+  );
+};
 
 export const Input = () => (
   <ComparisonLayout title="Input">
     {{
       tipalti: <Tipalti />,
-      chakra: <Box>Chakra Input Implementation</Box>,
+      chakra: <Chakra />,
     }}
   </ComparisonLayout>
 );

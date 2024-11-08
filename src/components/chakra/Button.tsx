@@ -1,4 +1,3 @@
-import React from "react";
 import { Button, type ButtonProps } from "@chakra-ui/react";
 
 type ButtonSize = "sm" | "md" | "lg";
@@ -6,7 +5,7 @@ type ButtonVariant = "primary" | "secondary" | "action";
 
 interface CustomButtonProps extends ButtonProps {
   size?: ButtonSize;
-  variant?: ButtonVariant;
+  customVariant?: ButtonVariant;
 }
 
 const sizeStyles = {
@@ -58,7 +57,7 @@ const variantStyles = {
 export const ChakraButton = ({
   children,
   size = "md",
-  variant = "primary",
+  customVariant = "primary",
   ...props
 }: CustomButtonProps) => {
   return (
@@ -91,7 +90,7 @@ export const ChakraButton = ({
       animationIterationCount="1 !important"
       // Apply size and variant styles
       {...sizeStyles[size]}
-      {...variantStyles[variant]}
+      {...variantStyles[customVariant]}
       // Allow prop overrides
       {...props}
     >
