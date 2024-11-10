@@ -1,68 +1,79 @@
 import { Box, Text, Separator } from "@chakra-ui/react";
 import { ComparisonLayout } from "../components/ComparisonLayout";
 import { TipTextarea } from "@tipalti/react-textarea";
+import { ChakraTextarea } from "../components/chakra/TextArea";
+
 const Tipalti = () => {
   return (
     <Box>
       <Box mb="3" w="50%">
-        <Text mb="1">Default TextArea</Text>
-        <TipTextarea label="Custom Label" placeholder="Enter text..." />
+        <Text mb="1">Default Textarea</Text>
+        <TipTextarea label="Textarea Label" placeholder="Placeholder text..." />
       </Box>
       <Separator mt="3" mb="3" />
       <Box mb="3" w="50%">
-        <Text mb="1">Secondary TextArea</Text>
+        <Text mb="1">Disabled Textarea</Text>
         <TipTextarea
-          label="Custom Label"
-          placeholder="Enter text..."
-          variant="secondary"
-        />
-      </Box>
-      <Separator mt="3" mb="3" />
-      <Box mb="3" w="50%">
-        <Text mb="1">TextArea with Char Count</Text>
-        <TipTextarea
-          label="Custom Label"
-          placeholder="Enter text..."
-          countchars={true}
-          maxlength={100}
-        />
-      </Box>
-      <Separator mt="3" mb="3" />
-      <Box mb="3" w="50%">
-        <Text mb="1">Disabled Input</Text>
-        <TipTextarea
-          label="Custom Label"
-          placeholder="Enter text..."
+          label="Textarea Label"
+          placeholder="Placeholder text..."
           disabled
         />
       </Box>
+
       <Separator mt="3" mb="3" />
       <Box mb="3" w="50%">
-        <Text mb="1">TextArea with Error</Text>
+        <Text mb="1">Required Textarea</Text>
         <TipTextarea
-          label="Custom Label"
-          placeholder="Enter text..."
-          errors={["Error message"]}
+          label="Textarea Label"
+          placeholder="Placeholder text..."
+          fieldmode="required"
         />
       </Box>
       <Separator mt="3" mb="3" />
       <Box mb="3" w="50%">
-        <Text mb="1">Required TextArea</Text>
+        <Text mb="1">Textarea with Error</Text>
         <TipTextarea
-          label="Custom Label"
-          placeholder="Enter text..."
-          fieldmode="required"
+          label="Textarea Label"
+          placeholder="Placeholder text..."
+          errors={["Error message"]}
         />
       </Box>
     </Box>
   );
 };
 
+const Chakra = () => {
+  return (
+    <Box>
+      <Box mb="3" w="50%">
+        <Text mb="1">Default Textarea</Text>
+        <ChakraTextarea />
+      </Box>
+      <Separator mt="3" mb="3" />
+      <Box mb="3" w="50%">
+        <Text mb="1">Disabled Textarea</Text>
+        <ChakraTextarea disabled />
+      </Box>
+
+      <Separator mt="3" mb="3" />
+      <Box mb="3" w="50%">
+        <Text mb="1">Required Textarea</Text>
+        <ChakraTextarea required />
+      </Box>
+      <Separator mt="3" mb="3" />
+      <Box mb="3" w="50%">
+        <Text mb="1">Textarea with Error</Text>
+        <ChakraTextarea error="Error message" />
+      </Box>
+    </Box>
+  );
+};
+
 export const TextArea = () => (
-  <ComparisonLayout title="Input">
+  <ComparisonLayout title="Textarea">
     {{
       tipalti: <Tipalti />,
-      chakra: <Box>Chakra Input Implementation</Box>,
+      chakra: <Chakra />,
     }}
   </ComparisonLayout>
 );
