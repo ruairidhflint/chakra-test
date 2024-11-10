@@ -12,20 +12,21 @@ const Tipalti = () => {
       </Box>
       <Separator mt="3" mb="3" />
       <Box mb="3" w="50%">
-        <Text mb="1">Input with Icon</Text>
-        <TipInput
-          label="Input Label"
-          placeholder="Placeholder text..."
-          endicon={{ iconclass: "far fa-search" }}
-        />
-      </Box>
-      <Separator mt="3" mb="3" />
-      <Box mb="3" w="50%">
         <Text mb="1">Disabled Input</Text>
         <TipInput
           label="Input Label"
           placeholder="Placeholder text..."
           disabled
+        />
+      </Box>
+
+      <Separator mt="3" mb="3" />
+      <Box mb="3" w="50%">
+        <Text mb="1">Required Input</Text>
+        <TipInput
+          label="Input Label"
+          placeholder="Placeholder text..."
+          fieldmode="required"
         />
       </Box>
       <Separator mt="3" mb="3" />
@@ -36,15 +37,6 @@ const Tipalti = () => {
           placeholder="Placeholder text..."
           status="error"
           footeroptions={{ text: { content: "Error message" } }}
-        />
-      </Box>
-      <Separator mt="3" mb="3" />
-      <Box mb="3" w="50%">
-        <Text mb="1">Required Input</Text>
-        <TipInput
-          label="Input Label"
-          placeholder="Placeholder text..."
-          fieldmode="required"
         />
       </Box>
     </Box>
@@ -59,23 +51,19 @@ const Chakra = () => {
       </Box>
       <Separator mt="3" mb="3" />
       <Box mb="3" w="50%">
-        <Text mb="1">Input with Icon</Text>
-        <ChakraInput />
+        <Text mb="1">Disabled Input</Text>
+        <ChakraInput disabled />
       </Box>
+
       <Separator mt="3" mb="3" />
       <Box mb="3" w="50%">
-        <Text mb="1">Disabled Input</Text>
-        <ChakraInput />
+        <Text mb="1">Required Input</Text>
+        <ChakraInput required />
       </Box>
       <Separator mt="3" mb="3" />
       <Box mb="3" w="50%">
         <Text mb="1">Input with Error</Text>
-        <ChakraInput />
-      </Box>
-      <Separator mt="3" mb="3" />
-      <Box mb="3" w="50%">
-        <Text mb="1">Required Input</Text>
-        <ChakraInput />
+        <ChakraInput error="Error message" />
       </Box>
     </Box>
   );
