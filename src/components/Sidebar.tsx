@@ -9,8 +9,9 @@ const Sidebar = () => {
   const navItems = [
     { name: "Button", path: "/button" },
     { name: "Input", path: "/input" },
-    { name: "Modal", path: "/modal" },
+    // { name: "Modal", path: "/modal" },
     { name: "TextArea", path: "/textarea" },
+    // { name: "Switch", path: "/switch" },
   ];
 
   return (
